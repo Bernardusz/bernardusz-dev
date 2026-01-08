@@ -1,0 +1,30 @@
+---
+import Button from "@/components/shared/Button.astro";
+import Card from "@/components/shared/Card.astro";
+import ReverseCard from "@/components/shared/ReverseCard.astro";
+import TitleParagraph from "@/components/shared/TitleParagraph.astro";
+import { Image } from "astro:assets";
+import GitHubScreenshot from "../../../../public/images/Bernardusz.png"
+---
+<section
+  class="relative section h-fit flex items-center justify-center gap-4 flex-col w-full"
+  >
+	<div class="h-[50vh] gap-4 flex flex-col items-center justify-center" >
+		<TitleParagraph
+			title="Bernardusz - Frontend Developer"
+			variant="h1"
+			class="items-center justify-center text-center"
+			text="Hi! I'm Bernardusz, a <strong>Frontend Developer</strong> and future Full Stack Software Engineer"
+		/>
+		<div class="flex flex-row gap-8 w-full justify-center">
+			<Button link="/services">Hire Me</Button>
+			<Button primaryOrSecondary="secondary" link="/projects">Learn More</Button>
+		</div>
+	</div>
+	<Image
+		src={GitHubScreenshot}
+		alt="Screenshot of GitHub"
+		class="aspect-video w-full rounded-xl -mt-24"
+		quality="max"
+	/>
+</section>

@@ -44,3 +44,10 @@ All commands are run from the root of the project, from a terminal:
 ## 👀 Want to learn more?
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+
+## Credits
+- Photo by <a href="https://unsplash.com/@timothycuenat?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Timothy Cuenat</a> on <a href="https://unsplash.com/photos/a-close-up-of-a-computer-screen-with-many-lines-of-code-on-it-NH0pmKaZeuk?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+- Photo by <a href="https://unsplash.com/@6heinz3r?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Gabriel Heinzer</a> on <a href="https://unsplash.com/photos/text-g5jpH62pwes?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+- Photo by <a href="https://unsplash.com/@jdiegoph?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Diego PH</a> on <a href="https://unsplash.com/photos/person-holding-light-bulb-fIq0tET6llw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+      
+      

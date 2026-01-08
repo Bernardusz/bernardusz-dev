@@ -1,0 +1,19 @@
+---
+interface Props {
+	title: string;
+	text: string;
+	variant?: "h1" | "h2" | "h3" | "h4";
+	class?: string
+};
+
+const { title, text, variant = 'h3', class: className} = Astro.props;
+const Tag = variant;
+---
+
+<div class:list={[
+	"flex flex-col justify-items-start gap-2",
+	className
+]}>
+	<Tag class="">{title}</Tag>
+	<p set:html={text}></p>
+</div>

@@ -4,7 +4,7 @@
 
 @font-face {
 	font-family: "Funnel_Sans";
-	src: url("/fonts/funnel_sans/FunnelSans-VariableFont_wght.woff2") format("woff2");
+	src: url("/fonts/funnel-sans/FunnelSans-VariableFont_wght.woff2") format("woff2");
 	font-display: swap;
 }
 
@@ -28,21 +28,24 @@
 }
 
 :root {
-	--background: hsl(260, 4%, 95%);
+	--primary-raw: 260 80% 50%;
+	--background-raw: 260, 4%, 95%;
+	--font-main: "Inter";
+	--font-heading: "Funnel_Sans";
+	font-size: clamp(12px, 0.4vw + 0.9rem, 20px);
+	--background: hsl(var(--background-raw));
 	--accent: hsl(260, 4%, 90%);
 	--muted: hsl(260, 4%, 85%);
 	--foreground: hsl(260, 4%, 5%);
 	--foreground-accent: hsl(260, 4%, 15%);
 	--foreground-muted: hsl(260, 4%, 25%);
-	--primary: hsl(260, 80%, 50%);
+	--primary: hsl(var(--primary-raw));
 	--secondary: hsl(140, 65%, 50%);
 }
 
 .dark {
-	--font-main: "Inter";
-	--font-heading: "Funnel_Sans";
-	font-size: clamp(12px, 0.4vw + 0.9rem, 20px);
-	--background: hsl(260, 4%, 5%);
+	--background-raw: 260, 4%, 5%;
+	--background: hsl(var(--background-raw));
 	--accent: hsl(260, 4%, 10%);
 	--muted: hsl(260, 4%, 15%);
 	--foreground: hsl(260, 4%, 95%);
@@ -81,15 +84,22 @@
         @apply flex h-fit w-full flex-col items-center justify-center pt-4 xl:pt-10 gap-8;
     }
     .p-deemphasize {
-        @apply text-muted-foreground text-sm font-normal font-main;
+        @apply text-foreground-muted text-sm font-normal font-main;
     }
     .link-primary {
         @apply text-primary hover:text-primary/90 font-medium;
     }
     .section {
-        @apply max-w-400 px-8 py-12 md:px-12 md:py-16 relative w-full;
+        @apply max-w-400 px-8 py-12 h-fit md:px-12 md:py-16 relative w-full;
     }
     .hover-transform {
         @apply transition-transform duration-300 hover:shadow-2xl motion-safe:hover:scale-105;
     }
+	.btn-primary{
+		@apply text-[#f2f2f3] min-h-8 px-4 py-2 min-w-24 hover:scale-105 transition-transform duration-300 bg-primary items-center justify-center flex rounded-xl hover:bg-primary/90
+	}
+	.btn-secondary{
+		@apply  text-[#0d0c0d] min-h-8 px-4 py-2 min-w-24 hover:scale-105 transition-transform duration-300 bg-secondary  items-center justify-center flex rounded-xl hover:bg-secondary/90
+	}
+
 }

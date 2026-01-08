@@ -1,0 +1,20 @@
+---
+import type { AstroComponentFactory } from "astro/runtime/server/index.js";
+interface Props {
+	Icon: AstroComponentFactory;
+	variant?: "h1" | "h2" | "h3" | "h4";
+	title: string;
+	class?: string;
+}
+
+const {Icon, variant = "h3", title, class:className} = Astro.props
+const Tag = variant
+---
+
+<div class:list={[
+	"flex flex-row gap-2 items-center",
+	className
+]}>
+	<div class="p-2 rounded-full bg-muted">{Icon}</div>
+	<Tag class="break-all">{title}</Tag>
+</div>
