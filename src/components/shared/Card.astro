@@ -1,37 +1,33 @@
 ---
 interface Props {
-    imageSrc: string;
-    imageAlt: string;
-    title: string;
-    text: string;
-    action?: any;
-    type: "flex-col" | "flex-row";
-    class?: string;
-    extraComponent?: any;
-};
+  imageSrc: string;
+  imageAlt: string;
+  title: string;
+  text: string;
+  type: "flex-col" | "flex-row";
+  class?: string;
+}
 
-const {imageSrc, action ,imageAlt, title, text, type, class:className, extraComponent} = Astro.props
+const { imageSrc, imageAlt, title, text, type, class: className } = Astro.props;
 ---
 
-<div 
-class:list={[
-	"bg-accent text-card-foreground hover-transform flex flex-col gap-6 rounded-xl border border-muted overflow-hidden shadow-sm",
-	className
-]}>
-		<img
-			src={imageSrc}
-			alt={imageAlt}
-			class="size-full object-cover aspect-video relative max-h-3/4"
-		/>
+<div
+  class:list={[
+    "bg-accent text-card-foreground hover-transform border-muted flex flex-col gap-6 overflow-hidden rounded-xl border shadow-sm",
+    className,
+  ]}
+>
+  <img
+    src={imageSrc}
+    alt={imageAlt}
+    class="relative aspect-video size-full h-full max-h-3/4 object-cover xl:max-h-60"
+  />
 
-	<div class:list={[
-		"flex w-full justify-between gap-4 pb-6 px-6",
-		type
-	]}>
-		<div class="flex flex-col items-start gap-2">
-			<h3>{title}</h3>
-			<p>{text}</p>
-		</div>
-		<slot/>
-	</div>
+  <div class:list={["flex w-full justify-between gap-4 px-6 pb-6", type]}>
+    <div class="flex flex-col items-start gap-2">
+      <h3>{title}</h3>
+      <p>{text}</p>
+    </div>
+    <slot />
+  </div>
 </div>

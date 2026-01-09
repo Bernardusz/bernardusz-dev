@@ -1,17 +1,20 @@
 ---
 interface Props {
-	link: string
-	class?: string
-	primaryOrSecondary?: "primary" | "secondary"
+  link: string;
+  class?: string;
+  primaryOrSecondary?: "primary" | "secondary";
 }
 
-const {link, class: className, primaryOrSecondary="primary"} = Astro.props
+const { link, class: className, primaryOrSecondary = "primary" } = Astro.props;
 ---
 
-<a href={link} class:list={[
-	{'btn-primary': primaryOrSecondary === "primary"},
-	{'btn-secondary': primaryOrSecondary === "secondary"},
-	className
-]}>
-	<slot/>
+<a
+  href={link}
+  class:list={[
+    { "btn-primary": primaryOrSecondary === "primary" },
+    { "btn-secondary": primaryOrSecondary === "secondary" },
+    className,
+  ]}
+>
+  <slot />
 </a>

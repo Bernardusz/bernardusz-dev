@@ -1,7 +1,7 @@
 // @ts-check
-import { defineConfig } from 'astro/config';
+import { defineConfig } from "astro/config";
 
-import tailwindcss from '@tailwindcss/vite';
+import tailwindcss from "@tailwindcss/vite";
 
 import vercel from "@astrojs/vercel";
 
@@ -17,24 +17,22 @@ export default defineConfig({
 
   vite: {
     resolve: {
-        alias: {
-            "@": "/src"
-        }
+      alias: {
+        "@": "/src",
+      },
     },
-    plugins: [tailwindcss()]
+    plugins: [tailwindcss()],
   },
 
   adapter: vercel({
-
     isr: {
-        expiration: 60 * 60 * 24 * 7
-        
+      expiration: 60 * 60 * 24 * 7,
     },
     imageService: true,
     webAnalytics: {
-        enabled: true,
-    }
+      enabled: true,
+    },
   }),
 
-  integrations: [mdx(), icon(), react()]
+  integrations: [mdx(), icon(), react()],
 });

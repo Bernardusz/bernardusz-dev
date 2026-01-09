@@ -4,27 +4,27 @@ import SidebarIsland from "@/components/layout/Sidebar";
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<link rel="stylesheet" href="./src/styles/global.css">
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body >
-		<SidebarIsland client:only/>
-		<slot />
-	</body>
+  <head>
+    <link rel="stylesheet" href="./src/styles/global.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro Basics</title>
+  </head>
+  <body>
+    <SidebarIsland client:only="true" />
+    <slot />
+  </body>
 </html>
 
 <style>
-	html,
-	body {
-		margin: 0;
-		padding: 0;
-		padding-top: 0;
-		width: 100%;
-		height: 100%;
-	}
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    padding-top: 0;
+    width: 100%;
+    height: 100%;
+  }
 </style>

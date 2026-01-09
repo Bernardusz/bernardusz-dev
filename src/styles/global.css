@@ -3,103 +3,107 @@
 @custom-variant dark (&:is(.dark *));
 
 @font-face {
-	font-family: "Funnel_Sans";
-	src: url("/fonts/funnel-sans/FunnelSans-VariableFont_wght.woff2") format("woff2");
-	font-display: swap;
+  font-family: "Funnel_Sans";
+  src: url("/fonts/funnel-sans/FunnelSans-VariableFont_wght.woff2")
+    format("woff2");
+  font-display: swap;
 }
 
 @font-face {
-	font-family: "Inter";
-	src: url("/fonts/inter/Inter-VariableFont_opsz,wght.woff2") format("woff2");
-	font-display: swap;
+  font-family: "Inter";
+  src: url("/fonts/inter/Inter-VariableFont_opsz,wght.woff2") format("woff2");
+  font-display: swap;
 }
 
-@theme inline{
-	--font-heading: var(--font-heading);
-	--font-main: var(--font-main);
-	--color-background: var(--background);
-	--color-accent: var(--accent);
-	--color-muted: var(--muted);
-	--color-foreground: var(--foreground);
-	--color-foreground-accent: var(--foreground-accent);
-	--color-foreground-muted: var(--foreground-muted);
-	--color-primary: var(--primary);
-	--color-secondary: var(--secondary);
+@theme inline {
+  --font-heading: var(--font-heading);
+  --font-main: var(--font-main);
+  --color-background: var(--background);
+  --color-accent: var(--accent);
+  --color-muted: var(--muted);
+  --color-foreground: var(--foreground);
+  --color-foreground-accent: var(--foreground-accent);
+  --color-foreground-muted: var(--foreground-muted);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-soft-white: hsl(260, 4%, 95%);
 }
 
 :root {
-	--primary-raw: 260 80% 50%;
-	--background-raw: 260, 4%, 95%;
-	--font-main: "Inter";
-	--font-heading: "Funnel_Sans";
-	font-size: clamp(12px, 0.4vw + 0.9rem, 20px);
-	--background: hsl(var(--background-raw));
-	--accent: hsl(260, 4%, 90%);
-	--muted: hsl(260, 4%, 85%);
-	--foreground: hsl(260, 4%, 5%);
-	--foreground-accent: hsl(260, 4%, 15%);
-	--foreground-muted: hsl(260, 4%, 25%);
-	--primary: hsl(var(--primary-raw));
-	--secondary: hsl(140, 65%, 50%);
+  --primary-raw: 260 80% 50%;
+  --background-raw: 260, 4%, 95%;
+  --font-main: "Inter";
+  --font-heading: "Funnel_Sans";
+  font-size: clamp(12px, 0.4vw + 0.9rem, 20px);
+  --background: hsl(var(--background-raw));
+  --accent: hsl(260, 4%, 90%);
+  --muted: hsl(260, 4%, 85%);
+  --foreground: hsl(260, 4%, 5%);
+  --foreground-accent: hsl(260, 4%, 15%);
+  --foreground-muted: hsl(260, 4%, 25%);
+  --primary: hsl(var(--primary-raw));
+  --secondary: hsl(140, 65%, 50%);
 }
 
 .dark {
-	--background-raw: 260, 4%, 5%;
-	--background: hsl(var(--background-raw));
-	--accent: hsl(260, 4%, 10%);
-	--muted: hsl(260, 4%, 15%);
-	--foreground: hsl(260, 4%, 95%);
-	--foreground-accent: hsl(260, 4%, 85%);
-	--foreground-muted: hsl(260, 4%, 75%);
-	--primary: hsl(260, 80%, 50%);
-	--secondary: hsl(140, 65%, 50%);
+  --background-raw: 260, 4%, 5%;
+  --background: hsl(var(--background-raw));
+  --accent: hsl(260, 4%, 10%);
+  --muted: hsl(260, 4%, 15%);
+  --foreground: hsl(260, 4%, 95%);
+  --foreground-accent: hsl(260, 4%, 85%);
+  --foreground-muted: hsl(260, 4%, 75%);
+  --primary: hsl(260, 80%, 50%);
+  --secondary: hsl(140, 65%, 50%);
 }
 
 @layer base {
-    * {
-        @apply font-main;
-    }
-    body {
-        @apply bg-background text-foreground;
-    }
-    h1 {
-        @apply text-4xl font-bold font-heading;
-    }
-    h2 {
-        @apply text-2xl font-bold font-heading;
-    }
-    h3 {
-        @apply text-xl font-semibold font-heading;
-    }
-    h4 {
-        @apply text-lg font-semibold font-heading;
-    }
-    p {
-        @apply text-base font-normal text-foreground-accent font-main;
-    }
+  * {
+    @apply font-main;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  h1 {
+    @apply font-heading text-4xl font-bold;
+  }
+  h2 {
+    @apply font-heading text-2xl font-bold;
+  }
+  h3 {
+    @apply font-heading text-xl font-semibold;
+  }
+  h4 {
+    @apply font-heading text-lg font-semibold;
+  }
+  p {
+    @apply text-foreground-accent font-main text-base font-normal;
+  }
 }
 
 @layer components {
-    .page {
-        @apply flex h-fit w-full flex-col items-center justify-center pt-4 xl:pt-10 gap-8;
-    }
-    .p-deemphasize {
-        @apply text-foreground-muted text-sm font-normal font-main;
-    }
-    .link-primary {
-        @apply text-primary hover:text-primary/90 font-medium;
-    }
-    .section {
-        @apply max-w-400 px-8 py-12 h-fit md:px-12 md:py-16 relative w-full;
-    }
-    .hover-transform {
-        @apply transition-transform duration-300 hover:shadow-2xl motion-safe:hover:scale-105;
-    }
-	.btn-primary{
-		@apply text-[#f2f2f3] min-h-8 px-4 py-2 min-w-24 hover:scale-105 transition-transform duration-300 bg-primary items-center justify-center flex rounded-xl hover:bg-primary/90
-	}
-	.btn-secondary{
-		@apply  text-[#0d0c0d] min-h-8 px-4 py-2 min-w-24 hover:scale-105 transition-transform duration-300 bg-secondary  items-center justify-center flex rounded-xl hover:bg-secondary/90
-	}
-
+  .page {
+    @apply flex h-fit w-full flex-col items-center justify-center gap-8 pt-4 xl:pt-10;
+  }
+  .p-deemphasize {
+    @apply text-foreground-muted font-main text-sm font-normal;
+  }
+  .link-primary {
+    @apply text-primary hover:text-primary/90 text-sm font-medium;
+  }
+  .section {
+    @apply relative h-fit w-full px-[8%] py-12 xl:px-[20%];
+  }
+  .hover-transform {
+    @apply transition-transform duration-300 hover:shadow-2xl motion-safe:hover:scale-105;
+  }
+  .btn-primary {
+    @apply bg-primary hover:bg-primary/90 flex min-h-8 min-w-24 items-center justify-center rounded-xl px-4 py-2 text-[#f2f2f3] transition-transform duration-300 hover:scale-105;
+  }
+  .btn-secondary {
+    @apply bg-secondary hover:bg-secondary/90 flex min-h-8 min-w-24 items-center justify-center rounded-xl px-4 py-2 text-[#0d0c0d] transition-transform duration-300 hover:scale-105;
+  }
+  .purple-section {
+    @apply bg-primary text-[#f2f2f3];
+  }
 }

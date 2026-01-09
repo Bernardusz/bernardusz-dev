@@ -1,40 +1,43 @@
 ---
-import type { AstroComponentFactory } from 'astro/runtime/server/index.js';
+import type { AstroComponentFactory } from "astro/runtime/server/index.js";
 interface Props {
-    imageSrc: string;
-    imageAlt: string;
-    title: string;
-    text: string;
-    action?: AstroComponentFactory;
-    type: "flex-col" | "flex-row";
-    class?: string;
-    extraComponent?: AstroComponentFactory;
-};
+  imageSrc: string;
+  imageAlt: string;
+  title: string;
+  text: string;
+  action?: AstroComponentFactory;
+  type: "flex-col" | "flex-row";
+  class?: string;
+  extraComponent?: AstroComponentFactory;
+}
 
-const {imageSrc, action ,imageAlt, title, text, type, class:className, extraComponent} = Astro.props
+const {
+  imageSrc,
+  action,
+  imageAlt,
+  title,
+  text,
+  type,
+  class: className,
+  extraComponent,
+} = Astro.props;
 ---
 
-<div 
-class:list={[
-	"bg-accent text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm",
-	className
-]}>
-	<div class="aspect-video max-h-1/2 h-full w-full relative">
-		<img
-			src={imageSrc}
-			alt={imageAlt}
-			class="size-full object-cover"
-		/>
-	</div>
+<div
+  class:list={[
+    "bg-accent text-card-foreground flex flex-col gap-6 rounded-xl border py-6 shadow-sm",
+    className,
+  ]}
+>
+  <div className="relative aspect-video h-full max-h-1/2 w-full">
+    <img src={imageSrc} alt={imageAlt} className="size-full object-cover" />
+  </div>
 
-	<div class:list={[
-		"flex w-full justify-between gap-4",
-		type
-	]}>
-		<div class="flex flex-col items-start gap-2 px-6">
-			<h3>{title}</h3>
-			<p>{text}</p>
-		</div>
-		{action}
-	</div>
+  <div class:list={["flex w-full justify-between gap-4", type]}>
+    <div className="flex flex-col items-start gap-2 px-6">
+      <h3>{title}</h3>
+      <p>{text}</p>
+    </div>
+    {action}
+  </div>
 </div>

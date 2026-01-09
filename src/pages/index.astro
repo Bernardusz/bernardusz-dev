@@ -1,13 +1,19 @@
 ---
-import IndexHero from '@/components/section/index/IndexHero.astro';
-import Layout from '../layouts/Layout.astro';
-import BentoSkills from '@/components/section/index/BentoSkills.astro';
-export const prerender = false
+import IndexHero from "@/components/section/index/IndexHero.astro";
+import Layout from "../layouts/Layout.astro";
+import SkillsSection from "@/components/section/index/SkillsSection.astro";
+import TopProjects from "@/components/section/index/TopProjects.astro";
+import Achievments from "@/components/section/index/Achievments.astro";
+import CallToAction from "@/components/shared/CallToAction.astro";
+export const prerender = true;
 ---
 
-<Layout >
-	<main class="page">
-		<IndexHero/>
-		<BentoSkills/>
-	</main>
+<Layout>
+  <main class="page">
+    <IndexHero />
+    <SkillsSection />
+    <TopProjects />
+    <Achievments />
+    <CallToAction />
+  </main>
 </Layout>
