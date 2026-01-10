@@ -5,12 +5,14 @@ import SkillsSection from "@/components/section/index/SkillsSection.astro";
 import TopProjects from "@/components/section/index/TopProjects.astro";
 import Achievments from "@/components/section/index/Achievments.astro";
 import CallToAction from "@/components/shared/CallToAction.astro";
+import AboutSection from "@/components/section/index/AboutSection.astro";
 export const prerender = true;
 ---
 
 <Layout>
   <main class="page">
     <IndexHero />
+	<AboutSection/>
     <SkillsSection />
     <TopProjects />
     <Achievments />
