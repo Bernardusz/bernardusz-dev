@@ -1,5 +1,6 @@
 ---
 import SidebarIsland from "@/components/layout/Sidebar";
+import Header from "@/components/layout/Header.astro";
 ---
 
 <!doctype html>
@@ -11,9 +12,22 @@ import SidebarIsland from "@/components/layout/Sidebar";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>Astro Basics</title>
+    <script is:inline>
+      // This runs immediately before the body renders
+      const theme =
+        localStorage.getItem("lightOrDark") ||
+        (window.matchMedia("(prefers-color-scheme: dark)").matches
+          ? "dark"
+          : "light");
+
+      if (theme === "dark") {
+        document.documentElement.classList.add("dark");
+      }
+    </script>
   </head>
   <body>
-    <SidebarIsland client:only="true" />
+    <Header client:load />
+    <!-- <SidebarIsland client:only="true" /> -->
     <slot />
   </body>
 </html>
