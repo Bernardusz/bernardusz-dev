@@ -7,6 +7,7 @@ interface Props {
   link?: string;
   linkText?: string;
   white?: boolean;
+  centered?: boolean;
 }
 
 const {
@@ -16,12 +17,19 @@ const {
   linkText,
   link,
   variant = "h3",
+  centered,
   class: className,
 } = Astro.props;
 const Tag = variant;
 ---
 
-<div class:list={["flex flex-col justify-items-start gap-2", className]}>
+<div
+  class:list={[
+    "flex flex-col items-start justify-start gap-2",
+    className,
+    { "px-8 text-center": centered },
+  ]}
+>
   <Tag class:list={[{ "text-soft-white": white }]}>{title}</Tag>
   <p class:list={[{ "text-soft-white": white }]} set:html={text} />
   {

@@ -89,7 +89,7 @@
     @apply text-foreground-muted font-main text-sm font-normal;
   }
   .link-primary {
-    @apply text-primary hover:text-primary/90 text-sm font-medium;
+    @apply text-primary hover:text-primary/90 text-center text-sm font-medium;
   }
   .section {
     @apply relative h-fit w-full px-[8%] py-12 xl:px-[20%];

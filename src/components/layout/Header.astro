@@ -4,12 +4,12 @@ const currentPath = Astro.url.pathname;
 ---
 
 <header
-  class="fixed top-0 left-0 z-50 h-20 w-full rounded-xl bg-none px-8 py-3"
+  class="fixed top-0 left-0 z-50 h-28 w-full rounded-xl bg-none px-4 py-3 md:h-20"
 >
   <div
-    class="border-muted bg-background relative flex h-full items-center rounded-2xl border px-8"
+    class="border-muted bg-background relative flex h-full flex-col items-center justify-center rounded-2xl border px-8 md:flex-row"
   >
-    <h4>
+    <h4 class="hidden md:absolute md:left-8 md:flex">
       {
         currentPath.split("/")[1]
           ? currentPath.split("/")[1].slice(0, 1).toUpperCase() +
@@ -17,7 +17,13 @@ const currentPath = Astro.url.pathname;
           : "Bernardusz"
       }
     </h4>
-    <nav class="absolute left-1/2 flex -translate-x-1/2 gap-6">
+    <button id="toggleMode" class="absolute right-4 md:right-8">
+      <Icon name="tabler:sun" size={24} class="flex dark:hidden" />
+      <Icon name="tabler:moon" size={24} class="hidden dark:flex" />
+    </button>
+    <nav
+      class="grid grid-cols-3 items-center gap-2 md:absolute md:left-1/2 md:flex md:-translate-x-1/2 md:gap-6"
+    >
       <a class="link-primary" href="/"> Home </a>
       <a class="link-primary" href="/about"> About</a>
       <a class="link-primary" href="/projects">Projects</a>
@@ -25,10 +31,6 @@ const currentPath = Astro.url.pathname;
       <a class="link-primary" href="/services">Services</a>
       <a class="link-primary" href="/contact"> Contact</a>
     </nav>
-    <button id="toggleMode" class="ml-auto">
-      <Icon name="tabler:sun" size={24} class="flex dark:hidden" />
-      <Icon name="tabler:moon" size={24} class="hidden dark:flex" />
-    </button>
   </div>
 </header>
 

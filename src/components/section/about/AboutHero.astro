@@ -2,18 +2,18 @@
 import Button from "@/components/shared/Button.astro";
 import TitleParagraph from "@/components/shared/TitleParagraph.astro";
 import { Image } from "astro:assets";
-import GitHubScreenshot from "~/images/Bernardusz_GitHub.png";
+import InstagramScreenshot from "~/images/Bernardusz_Instagram.png";
 ---
 
 <section
-  class="section relative flex h-fit w-full flex-col items-center justify-center gap-16"
+  class="section relative flex h-fit w-full flex-col items-center justify-center gap-16 text-center"
 >
   <div class="flex h-[50vh] flex-col items-center justify-center gap-4">
     <TitleParagraph
-      title="Bernardusz - Frontend Developer"
+      title="About Me - My Personal Life"
       variant="h1"
-      class="items-center justify-center text-center"
-      text="Hi! I'm Bernardusz, a <strong>Frontend Developer</strong> and future Full Stack Software Engineer"
+	  centered
+      text="This is all about me, the person <strong>behind the code</strong>"
     />
     <div class="flex w-full flex-row justify-center gap-8">
       <Button link="/services">Hire Me</Button>
@@ -22,9 +22,9 @@ import GitHubScreenshot from "~/images/Bernardusz_GitHub.png";
     </div>
   </div>
   <Image
-    src={GitHubScreenshot}
+    src={InstagramScreenshot}
     alt="Screenshot of GitHub"
-    class="-mt-24 aspect-video w-full rounded-xl"
+    class="-mt-24 h-full rounded-xl"
     quality="max"
   />
 </section>

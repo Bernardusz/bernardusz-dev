@@ -23,7 +23,12 @@ const { imageSrc, imageAlt, title, text, type, class: className } = Astro.props;
     class="relative aspect-video size-full h-full max-h-3/4 object-cover xl:max-h-60"
   />
 
-  <div class:list={["flex w-full justify-between gap-4 px-6 pb-6", type]}>
+  <div
+    class:list={[
+      "flex w-full items-start justify-between gap-4 px-6 pb-6",
+      type,
+    ]}
+  >
     <div class="flex flex-col items-start gap-2">
       <h3>{title}</h3>
       <p>{text}</p>

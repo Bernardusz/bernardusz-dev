@@ -1,5 +1,4 @@
 ---
-import SidebarIsland from "@/components/layout/Sidebar";
 import Header from "@/components/layout/Header.astro";
 ---
 
@@ -27,7 +26,6 @@ import Header from "@/components/layout/Header.astro";
   </head>
   <body>
     <Header client:load />
-    <!-- <SidebarIsland client:only="true" /> -->
     <slot />
   </body>
 </html>
