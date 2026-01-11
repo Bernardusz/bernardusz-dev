@@ -1,0 +1,60 @@
+{
+	"2026": {
+		"Roadmap": {
+			"C": "My target with C was to learn how computer (memory, CPU instructions, etc.) works and how much modern languages abstract complex tasks to become a better programmer and gain a deeper understanding on how programs work",
+			"Java": "After learning how computer works and abstraction, I want to learn how garbage collector work and how to write a scalable, robust and readable code in Java.",
+			"Spring Boot - Java": "Next in my list was Spring Boot with Java. The reasoning was I also want to understand how backend truly works and how many Frameworks abstract so many things for DX. Oh and also while we're at it, We'll do an SQL first backend, ORM later.",
+			"Kotlin" : "Not going away from Java Virtual Machine ecosystem anytime soon, I want to learn Kotlin next. After we learn how to write a robust and readable code in Java, time to learn its nicer and more modern sibling: Kotlin.",
+			"Spring Boot - Kotlin": "The same reasoning as Kotlin, time to learn how modern devs actually write backend codes in Kotlin.",
+			"Nest.js" : "I already have Spring Boot for enterprise and Django for data heavy backend, time to add one more: Nest.js. In this framework, my skill will be tested: 'Have I truly understand what's behind the abstractions?'"
+		},
+		"Personal": {
+			"English": "In 2026, I want to at least be good in this language, writing and speaking wise is preffered. My target at least B2 or early C1.",
+			"Hungarian": "For this language, I want to at least be an A2 speaker by the end of 2026",
+			"School": "I want to keep up my good grades, even improve if possible. Be a top and star student and an exemplar figure does sound nice 🐧.",
+			"Faith & Discipline": "I want to cut off any leech that's taking away my time. I want to cut off social media and lazing around without any purpose as much as possible.",
+			"Story Writing": "Yes! I wrote, but still currently writing fanfictions. So my target at least finish 2 fanfictions by December of 2026, so i can binge read during holiday 💀."
+		},
+		"Why": {
+			"Roadmap": "Why did I choose those? I want to become Language and Framework agnostic. I don't want to only know how but understand what and why behind the abstractions. I hate uncertainty and cluelessness.",
+			"Personal": "The reasoning? Simple: I want to be as productive as possible. I want to truly fight for all that is beautiful in this world, so I need to be ready for anything."
+		}
+	},
+	"2027": {
+		"Roadmap": {
+			"Systems & Infra": "After we learn how programming languages work, we'll learn with whom they operate deeply. My target are Linux as daily driver, VPS deployment, Nginx and Docker",
+			"Performance & Scalability": "Simple: Learn how CDN, Reverse Proxies, Redis and Microservice architechture actually works and try building with these stacks",
+			"Security - Basic": "Not to be a Cybersecurity engineer but to understand web security fundamentals. Alongside exploits hackers use. Also deep dive into Auth and basic CTF/Attacking my own site.",
+			"CI/CD": "Learn how tests help modern softwares and apps from breaking and automation that massively improves DX alongside how real apps get deployed"
+		},
+		"Personal": {
+			"English": "Now, after everything I want to understand English deeply. My target is speaking and writing fluently so I can yap more. And not only locally tested but deployed to real world with IELTS test",
+			"Hungarian": "So for Hungarian my target for 2027 is I can speak, read and write in Hungarian quite nicely, not fluent yet but capable of surviving. At least B1 - early B2",
+			"School": "I want to be a top student still. My target grades for this year is an average of 92-95, so my report cards will shine.",
+			"Faith & Discipline": "So for faith and discipline, after I cut off laziness and social media, the next thing I want to address is my appetite. I want to reduce binge eating so I can be healthier",
+			"Story Writing": "The first 2 books are done so next, I want to continue writing fanfics, so I can be ready to start my own universe. At least 2 books, if time allow 3."
+		},
+		"Why": {
+			"Roadmap": "So why did I want to learn DevOps and Infra ? Simple: I want to be independent. I want to learn how to make sure my apps can be used and not just sitting in Github collecting dust.",
+			"Personal": "So by the end of 2027, I will be in 12th grade. I want to be ready to apply to Stipendium Hungaricum by 2028, so this year will be the most intense year of my life, yet."
+		}
+	},
+	"2028": {
+		"Roadmap": {
+			"One last project": "After everything, I want to create one last project, my magnum opus of a project to boost my chance in SH.",
+			"Apply to Stipendium Hungaricum": "Now time to get my answer: Am I accepted or not? - Hopefully yes 🐧✨ I want to get into a Uni in Hungary, my target is University of Debrecen"
+		},
+		"Personal": {
+			"English": "After I get my English tested, I want to put it into use. I'll talk to more people in English, broaden my networking so I can be ready for anything.",
+			"Hungarian": "So my target by June of 2028? I can speak in Hungarian, read and write in Hungarian. I won't just survive, I'll thrive.",
+			"School": "Now the last year of my school life. My target? I'll be the top performing student by graduation. The valedictorian if you will ✨🐧💀",
+			"Faith & Discipline": "Now my last year in Indonesia if I'm accepted into Stipendium Hungaricum. I want to spend as much time as possible with fellow friends in my parish before I go",
+			"Story Writing": "So 4 books done, if time allowed 5 books finished. I want to start my own original book, trilogy and series ✨📖."
+		},
+		"Why" : {
+			"Roadmap": "So by this time, I want my CV and Portfolio to be soo good, soo masive both University administrator and HRD will accept me in 💀🐧.",
+			"Personal": "Why I want to go to Hungary? I want to go to a majority Christian if possible Catholic nation that offers fully funded scholarship. And Hungary is the perfect place to go."
+		}
+	}
+	
+}
