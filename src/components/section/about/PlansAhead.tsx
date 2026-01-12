@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import { Icon } from "@iconify/react"
 import aboutData from "@/data/about.json"
 
@@ -11,12 +11,6 @@ export default function YearsPlanAhead(){
 	const changeYear = (year: 2026 | 2027 | 2028) => {
 		setYear(year);
 	};
-	useEffect(() => {
-		switch (tab){
-			case "Roadmap":
-				
-		}
-	}, [year, tab])
 	return (
 		<section className="section flex-col flex gap-2">
 			<h2>📖 My 2.5 Years Plan</h2>
@@ -46,8 +40,16 @@ export default function YearsPlanAhead(){
 					Why
 				</button>
 			</div>
-			<div className="h-80 flex flex-col overflow-y-auto px-12 py-8">
-				{}
+			<div className="h-80 flex flex-col overflow-y-auto px-12 py-8 gap-6">
+				{Object.entries(aboutData[year][tab]).map(([title, description]) => (
+					<div
+						key={title}
+						className="flex flex-col items-start justify-start gap-2"
+						>
+						<h3 className="text-soft-white">{title}</h3>
+						<p>{description}</p>
+					</div>
+				))}
 			</div>
 			<div className="w-full justify-between flex flex-row bg-muted px-12 py-8">
 				<button 
