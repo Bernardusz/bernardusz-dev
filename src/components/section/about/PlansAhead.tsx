@@ -17,16 +17,16 @@ export default function YearsPlanAhead(){
 			<div 
 			className="bg-accent text-card-foreground border-muted flex flex-col gap-6 overflow-hidden rounded-xl border shadow-sm "
 		>
-			<div className="w-full justify-between flex flex-row bg-muted px-12 py-8">
+			<div className="w-full justify-between flex flex-row bg-muted px-8 md:px-12 py-8">
 				<button 
-					className={`${tab === "Roadmap" ? "bg-background text-foreground" : "text-foreground-muted hover:text-foreground"} flex min-h-8 min-w-24 items-center justify-center rounded-xl px-4 py-2 transition-transform duration-300 hover:scale-105 gap-2`}
+					className={`${tab === "Roadmap" ? "bg-background text-foreground" : "text-foreground-muted hover:text-foreground"} flex min-h-8 min-w-32 items-center justify-center rounded-xl px-4 py-2 transition-transform duration-300 hover:scale-105 gap-2`}
 					onClick={() => changeTab("Roadmap")}
 				>
 					<Icon className={`${tab === "Roadmap" && "text-primary"}`} icon="tabler:road"/>
 					Roadmap
 				</button>
 				<button 
-					className={`${tab === "Personal" ? "bg-background text-foreground" : "text-foreground-muted hover:text-foreground"} flex min-h-8 min-w-24 items-center justify-center rounded-xl px-4 py-2 transition-transform duration-300 hover:scale-105 gap-2`} 
+					className={`${tab === "Personal" ? "bg-background text-foreground" : "text-foreground-muted hover:text-foreground"} flex min-h-8 min-w-32 items-center justify-center rounded-xl px-4 py-2 transition-transform duration-300 hover:scale-105 gap-2`} 
 					onClick={() => changeTab("Personal")}
 				>
 					<Icon className={`${tab === "Personal" && "text-primary"}`} icon="tabler:trophy"/>
@@ -65,7 +65,7 @@ export default function YearsPlanAhead(){
 					2027
 				</button>
 				<button
-					className={`${year === 2028 ? "bg-background text-foreground" : "text-foreground-muted hover:text-foreground"} flex min-h-8 min-w-24 items-center justify-center rounded-xl px-4 py-2 transition-transform duration-300 hover:scale-105 gap-2`}
+					className={`${year === 2028 ? "bg-background text-foreground" : "text-foreground-muted hover:text-foreground"} flex min-h-8 min-w-32 items-center justify-center rounded-xl px-4 py-2 transition-transform duration-300 hover:scale-105 gap-2`}
 					onClick={() => changeYear(2028)}
 				>
 					2028
