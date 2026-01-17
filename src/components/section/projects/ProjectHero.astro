@@ -1,0 +1,40 @@
+---
+import Button from "@/components/shared/Button.astro";
+import TitleParagraph from "@/components/shared/TitleParagraph.astro";
+import projectData from "@/data/projects.json"
+import Card from "@/components/shared/Card.astro";
+import TitleSection from "@/components/shared/TitleSection.astro";
+---
+
+<section
+  class="hero-background relative flex h-fit w-full flex-col items-center justify-center"
+>
+  <div class="flex h-[50vh] flex-col items-center justify-center gap-4">
+    <TitleParagraph
+      title="My Projects - Compilation"
+      variant="h1"
+      centered
+      white
+      text="All my remarkable projects I built over the years!"
+    />
+    <div class="flex w-full flex-row justify-center gap-8">
+      <Button link="/services">Hire Me</Button>
+      <Button primaryOrSecondary="secondary" link="/projects">Learn More</Button
+      >
+    </div>
+  </div>
+  <TitleSection sectionClassname="-mt-8" title="My Top Projects" flexOrGrid="flex" breakpoint="2xl">
+{projectData.top.map(project => (
+	<Card
+		title={project.title}
+		text={project.description}
+		iconName={project["icon-name"]}
+		iconSize={36}
+		class="2xl:max-w-1/4"
+  	>
+    	<a class="link-primary" href={`projects/${project.slug}`}>Learn More</a>
+ 	</Card>	
+))}
+  
+</TitleSection>
+</section>

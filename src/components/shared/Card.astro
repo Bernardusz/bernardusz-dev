@@ -1,36 +1,37 @@
 ---
+import { Icon } from 'astro-icon/components';
+
 interface Props {
-  imageSrc: string;
-  imageAlt: string;
+  iconName: string;
   title: string;
+  iconSize: number;
   text: string;
-  type: "flex-col" | "flex-row";
+  type?: "flex-col" | "flex-row" | "flex-col-reverse";
   class?: string;
 }
 
-const { imageSrc, imageAlt, title, text, type, class: className } = Astro.props;
+const { iconName, iconSize, title, text, type = 'flex-col', class: className } = Astro.props;
 ---
 
 <div
   class:list={[
-    "bg-accent text-card-foreground hover-transform border-muted flex flex-col gap-6 overflow-hidden rounded-xl border shadow-sm",
+    "bg-accent text-card-foreground hover-transform border-muted flex gap-6 overflow-hidden rounded-xl border shadow-sm",
     className,
   ]}
 >
-  <img
-    src={imageSrc}
-    alt={imageAlt}
-    class="relative aspect-video size-full h-full max-h-3/4 object-cover xl:max-h-60"
-  />
-
   <div
     class:list={[
-      "flex w-full items-start justify-between gap-4 px-6 pb-6",
+      "flex w-full items-start justify-between gap-2 p-6",
       type,
     ]}
   >
+	<Icon
+		name={iconName}
+		size={iconSize}
+		class="text-foreground"
+	/>
     <div class="flex flex-col items-start gap-2">
-      <h3>{title}</h3>
+      <h3 class="text-foreground">{title}</h3>
       <p>{text}</p>
     </div>
     <slot />

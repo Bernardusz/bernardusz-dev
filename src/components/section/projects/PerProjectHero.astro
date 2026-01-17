@@ -1,0 +1,65 @@
+---
+import Button from "@/components/shared/Button.astro";
+import TitleParagraph from "@/components/shared/TitleParagraph.astro";
+import projectData from "@/data/projects.json"
+import Image from "astro/components/Image.astro";
+// "icon-name": "tabler:cloud-network",
+// 	"image": "/public/images/Axion-Networks.png",
+//       "slug": "axion-networks",
+//       "title": "Axion Networks",
+//       "description": "A mock website for a VPS Company",
+//       "stack": ["React.js", "Shadcn/ui", "TailwindCSS", "Unhead"],
+//       "category": "Frontend",
+//       "pages": [
+//         "/",
+//         "/products",
+//         "/prodcuts/:type",
+//         "/pricing",
+//         "/dashboard",
+//         "/login",
+//         "/signup",
+//         "/credits"
+//       ],
+//       "repository": "https://github.com/Bernardusz/axion-networks",
+//       "deployed": true,
+//       "link": "axion-networks.vercel.app"
+interface Props {
+	image: string;
+	title: string;
+	description: string;
+	stack: string[];
+	category: string;
+	repository: string;
+	deployed: boolean;
+	link?: string;
+}
+
+const {image, title, description, stack, category, repository, deployed, link} = Astro.props
+---
+
+<section
+  class="pt-[16vh] relative flex h-fit w-full flex-col items-center justify-center xl:flex-row py-20"
+>
+  <img
+	src={image}
+	class="rounded-xl h-[40vh] object-cover"
+	loading="eager"
+  />
+<div class="flex flex-col justify-center items-start gap-4 h-50 w-full px-8">
+    <TitleParagraph
+      title={title}
+      variant="h2"
+      text={description}
+    />
+    <div class="flex w-full flex-row gap-8">
+		{link ? (
+			<Button link={link}>See for yourself</Button>
+      		<Button primaryOrSecondary="secondary" link={repository}>See the repo</Button>
+		) : (
+			<Button link={repository}>See the repo</Button>
+		)}
+
+    </div>
+  </div>
+  
+</section>

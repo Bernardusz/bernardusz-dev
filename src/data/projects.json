@@ -1,0 +1,164 @@
+{
+  "top": [
+    {
+	"icon-name": "tabler:cloud-network",
+	"image": "/images/Axion-Networks.png",
+      "slug": "axion-networks",
+      "title": "Axion Networks",
+      "description": "A mock website for a VPS Company",
+      "stack": ["React.js", "Shadcn/ui", "TailwindCSS", "Unhead"],
+      "category": "Frontend",
+      "pages": [
+        "/",
+        "/products",
+        "/prodcuts/:type",
+        "/pricing",
+        "/dashboard",
+        "/login",
+        "/signup",
+        "/credits"
+      ],
+      "repository": "https://github.com/Bernardusz/axion-networks",
+      "deployed": true,
+      "link": "axion-networks.vercel.app"
+    },
+    {
+      "slug": "bitebloom-cafe",
+	"image": "/images/Bitebloom-Cafe.png",
+	  "icon-name": "tabler:coffee",
+      "title": "Bitebloom Cafe",
+      "description": "A mock website for a Cafe",
+      "stack": ["Next.js", "Shadcn/ui", "TailwindCSS"],
+      "category": "Frontend",
+      "pages": ["/", "/products", "/about", "/find-us", "/credits"],
+      "repository": "https://github.com/Bernardusz/bitebloom-cafe",
+      "deployed": true,
+      "link": "bitebloom-cafe.vercel.app"
+    },
+    {
+		"icon-name": "tabler:plant",
+	"image": "/images/ESP32-Hydroponics-Manager.png",
+      "slug": "esp32-hydroponics-manager",
+      "title": "ESP32-Hydroponics-Manager",
+      "description": "An IoT-based hydroponics monitoring system using ESP32",
+      "stack": ["C++ - embedded", "Flask"],
+      "category": "Embedded",
+      "pages": ["/", "/data", "/data_page/:filename", "/data_list"],
+      "repository": "https://github.com/Bernardusz/ESP32-Hydroponics-Manager",
+      "deployed": false
+    },
+    {
+      "slug": "todo-app",
+	"image": "/images/ToDo-App.png",
+	  "icon-name": "tabler:clipboard-list",
+      "title": "ToDo-App",
+      "description": "A simple todo App using React and Django in my series of learning Django and React !",
+      "stack": ["React.js", "Django", "SQLite3"],
+      "category": "Fullstack",
+      "pages": [
+        "/",
+        "/login",
+        "/signup",
+        "/tasks",
+        "/tasks/:id",
+        "/tasks/creation",
+        "/tasks/:id/edit"
+      ],
+      "repository": "https://github.com/Bernardusz/ToDo-App",
+      "deployed": false
+    }
+  ],
+  "All Projects": [
+    {
+	"icon-name": "tabler:cloud-network",
+	"image": "/images/Axion-Networks.png",
+      "slug": "axion-networks",
+      "title": "Axion Networks",
+      "description": "A mock website for a VPS Company",
+      "stack": ["React.js", "Shadcn/ui", "TailwindCSS", "Unhead"],
+      "category": "Frontend",
+      "pages": [
+        "/",
+        "/products",
+        "/prodcuts/:type",
+        "/pricing",
+        "/dashboard",
+        "/login",
+        "/signup",
+        "/credits"
+      ],
+      "repository": "https://github.com/Bernardusz/axion-networks",
+      "deployed": true,
+      "link": "axion-networks.vercel.app"
+    },
+    {
+      "slug": "bitebloom-cafe",
+	"image": "/images/Bitebloom-Cafe.png",
+      "title": "Bitebloom Cafe",
+	  "icon-name": "tabler:coffee",
+      "description": "A mock website for a Cafe",
+      "stack": ["Next.js", "Shadcn/ui", "TailwindCSS"],
+      "category": "Frontend",
+      "pages": ["/", "/products", "/about", "/find-us", "/credits"],
+      "repository": "https://github.com/Bernardusz/bitebloom-cafe",
+      "deployed": true,
+      "link": "bitebloom-cafe.vercel.app"
+    },
+    {
+      "slug": "esp32-hydroponics-manager",
+	"image": "/images/ESP32-Hydroponics-Manager.png",
+		"icon-name": "tabler:plant",
+      "title": "ESP32-Hydroponics-Manager",
+      "description": "An IoT-based hydroponics monitoring system using ESP32",
+      "stack": ["C++ - embedded", "Flask"],
+      "category": "Embedded",
+      "pages": ["/", "/data", "/data_page/:filename", "/data_list"],
+      "repository": "https://github.com/Bernardusz/ESP32-Hydroponics-Manager",
+      "deployed": false
+    },
+    {
+      "slug": "todo-app",
+	  "icon-name": "tabler:clipboard-list",
+	"image": "/images/ToDo-App.png",
+      "title": "ToDo-App",
+      "description": "A simple todo App using React and Django in my series of learning Django and React !",
+      "stack": ["React.js", "Django", "SQLite3"],
+      "category": "Fullstack",
+      "pages": [
+        "/",
+        "/login",
+        "/signup",
+        "/tasks",
+        "/tasks/:id",
+        "/tasks/creation",
+        "/tasks/:id/edit"
+      ],
+      "repository": "https://github.com/Bernardusz/ToDo-App",
+      "deployed": false
+    },
+    {
+      "slug": "productivitypal-pyqt6",
+	"image": "/images/ProductivityPal-PyQt6.png",
+	  "icon-name": "tabler:list-search",
+      "title": "ProductivityPal-PyQt6",
+      "description": "A personal productivity app built with PyQt6",
+      "stack": ["PyQt6"],
+      "category": "Desktop",
+      "pages": ["Home", "Notes", "Pomodoro", "Todo"],
+      "repository": "https://github.com/Bernardusz/ProductivityPal-PyQt6",
+      "deployed": false
+    },
+    {
+      "slug": "failed-arduino-drone",
+	"image": "/images/Failed-Arduino-Drone.png",
+	  "icon-name": "tabler:drone",
+      "title": "Failed-Arduino-Drone",
+      "description": "A lightweight two-motor drone system with Bluetooth control via HC-05. Modular, expandable, and student-built with love 💖.",
+      "stack": ["C++ - embedded"],
+      "category": "Embedded",
+      "pages": ["-"],
+      "repository": "https://github.com/Bernardusz/Failed-Arduino-Drone",
+      "deployed": false
+    }
+  ]
+}

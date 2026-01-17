@@ -1,0 +1,21 @@
+---
+import Button from "@/components/shared/Button.astro";
+import TitleParagraph from "@/components/shared/TitleParagraph.astro";
+import projectData from "@/data/projects.json"
+import Card from "@/components/shared/Card.astro";
+import TitleSection from "@/components/shared/TitleSection.astro";
+---
+  <TitleSection title="My Top Projects" flexOrGrid="grid">
+{projectData["All Projects"].map(project => (
+	<Card
+		title={project.title}
+		text={project.description}
+		iconName={project["icon-name"]}
+		iconSize={36}
+		class=""
+  	>
+    	<a class="link-primary" href={`projects/${project.slug}`}>Learn More</a>
+ 	</Card>	
+))}
+  
+</TitleSection>

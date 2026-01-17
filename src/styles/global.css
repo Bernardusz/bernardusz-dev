@@ -32,6 +32,7 @@
 :root {
   --primary-raw: 260 80% 50%;
   --background-raw: 260, 4%, 95%;
+  --secondary-raw: 140, 65%, 50%;
   --font-main: "Inter";
   --font-heading: "Funnel_Sans";
   font-size: clamp(12px, 0.4vw + 0.9rem, 20px);
@@ -42,7 +43,7 @@
   --foreground-accent: hsl(260, 4%, 15%);
   --foreground-muted: hsl(260, 4%, 25%);
   --primary: hsl(var(--primary-raw));
-  --secondary: hsl(140, 65%, 50%);
+  --secondary: hsl(var(--secondary-raw));
 }
 
 .dark {
@@ -83,7 +84,7 @@
 
 @layer components {
   .page {
-    @apply flex h-fit w-full flex-col items-center justify-center gap-8 pt-4 xl:pt-10;
+    @apply flex h-fit w-full flex-col items-center justify-center gap-8 xl:pt-10;
   }
   .p-deemphasize {
     @apply text-foreground-muted font-main text-sm font-normal;
@@ -101,9 +102,9 @@
     @apply bg-primary hover:bg-primary/90 flex min-h-8 min-w-24 items-center justify-center rounded-xl px-4 py-2 text-[#f2f2f3] transition-transform duration-300 hover:scale-105;
   }
   .btn-secondary {
-    @apply bg-secondary hover:bg-secondary/90 flex min-h-8 min-w-24 items-center justify-center rounded-xl px-4 py-2 text-[#0d0c0d] transition-transform duration-300 hover:scale-105;
+    @apply bg-secondary hover:bg-secondary/90 flex min-h-8 min-w-24 items-center justify-center rounded-xl px-4 py-2 text-[#f2f2f3] transition-transform duration-300 hover:scale-105;
   }
-  .purple-section {
-    @apply bg-primary text-[#f2f2f3];
+  .hero-background {
+    @apply from-background via-primary to-background bg-linear-170 from-0% via-20% to-100% text-[#f2f2f3];
   }
 }

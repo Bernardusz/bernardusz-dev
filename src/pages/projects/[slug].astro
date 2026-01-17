@@ -1,0 +1,41 @@
+---
+import projectDatas from "@/data/projects.json"
+import Layout from '@/layouts/Layout.astro';
+import PerProjectHero from "@/components/section/projects/PerProjectHero.astro";
+
+type typeProject = typeof projectDatas["All Projects"][number];
+import type { GetStaticPaths } from "astro";
+
+export const getStaticPaths: GetStaticPaths = () => {
+    return projectDatas["All Projects"].map((project) => {
+        return {
+            // Changed 'id' to 'slug' to match your filename [...slug].astro
+            params: { slug: project.slug }, 
+            props: { project }
+        }
+    });
+};
+
+interface Props {
+    project: typeProject
+}
+
+// id will be undefined here because you are passing 'slug' in getStaticPaths
+const { slug } = Astro.params; 
+const { project } = Astro.props;
+---
+
+<Layout>
+    <main class="page">
+      <PerProjectHero
+          image={project.image}
+          title={project.title}
+          deployed={project.deployed}
+          description={project.description}
+          stack={project.stack}
+          category={project.category}
+          repository={project.repository}
+          link={project.link}
+      />
+    </main>
+</Layout>
