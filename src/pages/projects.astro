@@ -1,0 +1,15 @@
+---
+import projectDatas from "@/data/projects.json"
+import Layout from '@/layouts/Layout.astro';
+type typeProject = typeof projectDatas["All Projects"][number];
+import PerProject from "@/components/section/projects/PerProject.astro";
+import ProjectHero from "@/components/section/projects/ProjectHero.astro";
+import AllProjects from "@/components/section/projects/AllProjects.astro";
+---
+
+<Layout>
+    <main class="page">
+		<ProjectHero/>
+		<AllProjects/>
+    </main>
+</Layout>

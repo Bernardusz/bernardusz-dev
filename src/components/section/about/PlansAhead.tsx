@@ -53,7 +53,7 @@ export default function YearsPlanAhead() {
               key={title}
               className="flex flex-col items-start justify-start gap-2"
             >
-              <h3 className="text-soft-white">{title}</h3>
+              <h3>{title}</h3>
               <p>{description}</p>
             </div>
           ))}
@@ -72,7 +72,7 @@ export default function YearsPlanAhead() {
             2027
           </button>
           <button
-            className={`${year === 2028 ? "bg-background text-foreground" : "text-foreground-muted hover:text-foreground"} flex min-h-8 min-w-32 items-center justify-center gap-2 rounded-xl px-4 py-2 transition-transform duration-300 hover:scale-105`}
+            className={`${year === 2028 ? "bg-background text-foreground" : "text-foreground-muted hover:text-foreground"} flex min-h-8 min-w-24 items-center justify-center gap-2 rounded-xl px-4 py-2 transition-transform duration-300 hover:scale-105`}
             onClick={() => changeYear(2028)}
           >
             2028
