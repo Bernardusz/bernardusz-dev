@@ -47,7 +47,7 @@ const {
   {
     flexOrGrid ? (
       flexOrGrid === "grid" ? (
-        <GridSection class={className}>
+        <GridSection class={className} breakpoint={breakpoint}>
           <slot />
         </GridSection>
       ) : (
