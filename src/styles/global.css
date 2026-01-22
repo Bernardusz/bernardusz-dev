@@ -93,7 +93,7 @@
     @apply text-primary hover:text-primary/90 text-center text-sm font-medium;
   }
   .section {
-    @apply relative h-fit w-full px-[8%] py-12 xl:px-[20%];
+    @apply relative h-fit w-full px-[8%] py-12 xl:px-[16%];
   }
   .hover-transform {
     @apply transition-transform duration-300 hover:shadow-2xl motion-safe:hover:scale-105;

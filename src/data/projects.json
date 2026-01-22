@@ -20,7 +20,7 @@
       ],
       "repository": "https://github.com/Bernardusz/axion-networks",
       "deployed": true,
-      "link": "axion-networks.vercel.app"
+      "link": "https://axion-networks.vercel.app"
     },
     {
       "slug": "bitebloom-cafe",
@@ -33,7 +33,7 @@
       "pages": ["/", "/products", "/about", "/find-us", "/credits"],
       "repository": "https://github.com/Bernardusz/bitebloom-cafe",
       "deployed": true,
-      "link": "bitebloom-cafe.vercel.app"
+      "link": "https://bitebloom-cafe.vercel.app"
     },
     {
 		"icon-name": "tabler:plant",
@@ -89,7 +89,7 @@
       ],
       "repository": "https://github.com/Bernardusz/axion-networks",
       "deployed": true,
-      "link": "axion-networks.vercel.app"
+      "link": "https://axion-networks.vercel.app"
     },
     {
       "slug": "bitebloom-cafe",
@@ -102,7 +102,7 @@
       "pages": ["/", "/products", "/about", "/find-us", "/credits"],
       "repository": "https://github.com/Bernardusz/bitebloom-cafe",
       "deployed": true,
-      "link": "bitebloom-cafe.vercel.app"
+      "link": "https://bitebloom-cafe.vercel.app"
     },
     {
       "slug": "esp32-hydroponics-manager",

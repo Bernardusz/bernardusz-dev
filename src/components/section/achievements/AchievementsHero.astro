@@ -1,0 +1,41 @@
+---
+import Button from "@/components/shared/Button.astro";
+import TitleParagraph from "@/components/shared/TitleParagraph.astro";
+import projectData from "@/data/projects.json"
+import TitleSection from "@/components/shared/TitleSection.astro";
+import Card from "@/components/shared/Card.astro";
+---
+
+<section
+  class="hero-background relative flex h-fit w-full flex-col items-center justify-center"
+>
+  <div class="flex h-[50vh] flex-col items-center justify-center gap-4">
+    <TitleParagraph
+      title="My Achievments & Certificates"
+      variant="h1"
+      centered
+      white
+      text="All my proof of achievments and skills!"
+    />
+    <div class="flex w-full flex-row justify-center gap-8">
+      <Button link="/services">Hire Me</Button>
+      <Button primaryOrSecondary="secondary" link="/projects">Learn More</Button
+      >
+    </div>
+  </div>
+  <TitleSection sectionClassname="-mt-8" title="My Top Achievments" flexOrGrid="grid" breakpoint="xl">
+{projectData.top.map(project => (
+	<Card
+		title={project.title}
+		text={project.description}
+		imageSrc={project.image}
+        imageAlt={project.description}
+        type="flex-col"
+        class="2xl:max-w-1/4"
+  	>
+        <a href="#" class="link-primary text-left">Learn more</a>
+	</Card>	
+))}
+  
+</TitleSection>
+</section>
