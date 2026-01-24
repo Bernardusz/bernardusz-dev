@@ -1,26 +1,25 @@
 ---
 import Button from "@/components/shared/Button.astro";
 import TitleParagraph from "@/components/shared/TitleParagraph.astro";
-import projectData from "@/data/projects.json"
+import projectData from "@/data/projects.json";
 import ProjectCard from "@/components/shared/ProjectCard.astro";
 import TitleSection from "@/components/shared/TitleSection.astro";
 import Badge from "@/components/shared/Badge.astro";
 ---
-  <TitleSection title="My Top Projects" flexOrGrid="grid" breakpoint="2xl">
-{projectData["All Projects"].map(project => (
-	<ProjectCard
-		title={project.title}
-		text={project.description}
-		iconName={project["icon-name"]}
-		iconSize={36}
-		class="2xl:max-w-1/4"
-		deployed={project.deployed}
-		repository={project.repository}
-		link={project.link}
-		stack={project.stack}
-  	/>
-		
-))}
 
-  
+<TitleSection title="My Top Projects" flexOrGrid="grid" breakpoint="2xl">
+  {
+    projectData["All Projects"].map((project) => (
+      <ProjectCard
+        title={project.title}
+        text={project.description}
+        iconName={project["icon-name"]}
+        iconSize={36}
+        deployed={project.deployed}
+        repository={project.repository}
+        link={project.link}
+        stack={project.stack}
+      />
+    ))
+  }
 </TitleSection>

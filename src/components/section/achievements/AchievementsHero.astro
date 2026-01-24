@@ -1,9 +1,9 @@
 ---
 import Button from "@/components/shared/Button.astro";
 import TitleParagraph from "@/components/shared/TitleParagraph.astro";
-import projectData from "@/data/projects.json"
 import TitleSection from "@/components/shared/TitleSection.astro";
 import Card from "@/components/shared/Card.astro";
+import achievmentsData from "@/data/achievments.json";
 ---
 
 <section
@@ -23,19 +23,27 @@ import Card from "@/components/shared/Card.astro";
       >
     </div>
   </div>
-  <TitleSection sectionClassname="-mt-8" title="My Top Achievments" flexOrGrid="grid" breakpoint="xl">
-{projectData.top.map(project => (
-	<Card
-		title={project.title}
-		text={project.description}
-		imageSrc={project.image}
-        imageAlt={project.description}
-        type="flex-col"
-        class="2xl:max-w-1/4"
-  	>
-        <a href="#" class="link-primary text-left">Learn more</a>
-	</Card>	
-))}
-  
-</TitleSection>
+  <TitleSection
+    sectionClassname="-mt-8"
+    title="My Achievments"
+    flexOrGrid="flex"
+    breakpoint="xl"
+  >
+    {
+      achievmentsData.map((achievment) => (
+        <Card
+          title={achievment.title}
+          text={achievment.description}
+          imageSrc={achievment.image}
+          imageAlt={achievment.description}
+          type="flex-col"
+          class="xl:max-w-1/3"
+        >
+          <a href={achievment.proof} class="link-primary text-left">
+            See the certificates
+          </a>
+        </Card>
+      ))
+    }
+  </TitleSection>
 </section>

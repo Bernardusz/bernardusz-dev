@@ -1,5 +1,5 @@
 ---
-import { Icon } from 'astro-icon/components';
+import { Icon } from "astro-icon/components";
 import Badge from "@/components/shared/Badge.astro";
 interface Props {
   iconName: string;
@@ -14,7 +14,18 @@ interface Props {
   stack: string[];
 }
 
-const { iconName, link, stack ,repository, deployed ,iconSize, title, text, type = 'flex-col', class: className } = Astro.props;
+const {
+  iconName,
+  link,
+  stack,
+  repository,
+  deployed,
+  iconSize,
+  title,
+  text,
+  type = "flex-col",
+  class: className,
+} = Astro.props;
 ---
 
 <div
@@ -23,35 +34,34 @@ const { iconName, link, stack ,repository, deployed ,iconSize, title, text, type
     className,
   ]}
 >
-  <div
-    class="flex w-full items-start justify-between gap-4 p-6 flex-col"
-  >
-	<div class={`flex w-full items-start justify-between gap-2 ${type}`}>
-		<Icon
-			name={iconName}
-			size={iconSize}
-      class:list={"text-foreground"}
-      />
-		<div class="flex flex-col items-start gap-2">
-			<h3 class="text-foreground">{title}</h3>
-			<p>{text}</p>
-		</div>
-	</div>
+  <div class="flex w-full flex-col items-start justify-between gap-4 p-6">
+    <div class={`flex w-full items-start justify-between gap-2 ${type}`}>
+      <Icon name={iconName} size={iconSize} class:list={"text-foreground"} />
+      <div class="flex flex-col items-start gap-2">
+        <h3 class="text-foreground">{title}</h3>
+        <p>{text}</p>
+      </div>
+    </div>
     <div class="flex flex-col gap-8">
-        <div class="flex flex-row gap-2 items-start justify-start w-full">
-            {stack.map(tech => (
-                <Badge text={tech}/>
-            ))}
-        </div>
-        {deployed ? (
-            <div class="flex flex-row gap-8">
-                <a class="link-primary text-left" href={repository}>Repository</a>
-                <a class="link-primary text-left" href={link}>See the demo</a>
-            </div>
+      <div class="flex w-full flex-row items-start justify-start gap-2">
+        {stack.map((tech) => <Badge text={tech} />)}
+      </div>
+      {
+        deployed ? (
+          <div class="flex flex-row gap-8">
+            <a class="link-primary text-left" href={repository}>
+              Repository
+            </a>
+            <a class="link-primary text-left" href={link}>
+              See the demo
+            </a>
+          </div>
         ) : (
-            <a class="link-primary text-left" href={repository}>Repository</a>
-
-        )}
+          <a class="link-primary text-left" href={repository}>
+            Repository
+          </a>
+        )
+      }
     </div>
   </div>
 </div>

@@ -1,7 +1,7 @@
 ---
 import Button from "@/components/shared/Button.astro";
 import TitleParagraph from "@/components/shared/TitleParagraph.astro";
-import projectData from "@/data/projects.json"
+import projectData from "@/data/projects.json";
 import ProjectCard from "@/components/shared/ProjectCard.astro";
 import TitleSection from "@/components/shared/TitleSection.astro";
 import Badge from "@/components/shared/Badge.astro";
@@ -24,28 +24,33 @@ import Badge from "@/components/shared/Badge.astro";
       >
     </div>
   </div>
-  <TitleSection sectionClassname="-mt-8" title="My Top Projects" flexOrGrid="flex" breakpoint="2xl">
-{projectData.top.map(project => (
-	<ProjectCard
-		title={project.title}
-		text={project.description}
-		iconName={project["icon-name"]}
-		iconSize={36}
-		class="2xl:max-w-1/4"
-		repository={project.repository}
-		deployed={project.deployed}
-		link={project.link}
-		stack={project.stack}
-  	>
-		<div class="flex flex-col gap-8">
-			<div class="flex flex-row gap-2 items-start justify-start w-full">
-				{project.stack.map(tech => (
-					<Badge text={tech}/>
-				))}
-			</div>
-		</div>
-	</ProjectCard>	
-))}
-  
-</TitleSection>
+  <TitleSection
+    sectionClassname="-mt-8"
+    title="My Top Projects"
+    flexOrGrid="grid"
+    breakpoint="2xl"
+  >
+    {
+      projectData.top.map((project) => (
+        <ProjectCard
+          title={project.title}
+          text={project.description}
+          iconName={project["icon-name"]}
+          iconSize={36}
+          repository={project.repository}
+          deployed={project.deployed}
+          link={project.link}
+          stack={project.stack}
+        >
+          <div class="flex flex-col gap-8">
+            <div class="flex w-full flex-row items-start justify-start gap-2">
+              {project.stack.map((tech) => (
+                <Badge text={tech} />
+              ))}
+            </div>
+          </div>
+        </ProjectCard>
+      ))
+    }
+  </TitleSection>
 </section>

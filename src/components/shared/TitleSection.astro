@@ -10,7 +10,7 @@ interface Props {
   flexOrGrid?: "flex" | "grid";
   sectionClassname?: string;
   noPadding?: boolean;
-  breakpoint?: "sm" | "md" | "xl" | "2xl" 
+  breakpoint?: "sm" | "md" | "xl" | "2xl" | "none";
 }
 
 const {
@@ -21,7 +21,7 @@ const {
   flexOrGrid,
   sectionClassname,
   noPadding,
-  breakpoint = "xl"
+  breakpoint = "xl",
 } = Astro.props;
 ---
 

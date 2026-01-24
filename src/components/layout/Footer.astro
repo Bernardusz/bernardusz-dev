@@ -1,0 +1,87 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<footer
+  class="flex w-full flex-col items-center justify-center border-y"
+>
+  <div
+    class="mt-4 flex w-full max-w-400 flex-col justify-center gap-4 p-12"
+  >
+    <div class="flex h-fit w-full flex-col gap-6 xl:flex-row">
+      <div class="flex flex-col gap-2 xl:w-1/2">
+        <a href="/">
+          <div class="flex flex-row items-center justify-start gap-2">
+            <h4>Bernardusz</h4>
+          </div>
+        </a>
+        <p>
+			Hi! I'm Bernardusz, a Frontend Developer and future Full Stack Software Engineer
+        </p>
+      </div>
+      <div
+        class="flex flex-col justify-between gap-8 md:w-full md:flex-row xl:w-1/2 xl:gap-16 xl:px-16"
+      >
+        <div class="flex flex-col gap-4">
+          <h4>My Projects & Achievments</h4>
+          <nav>
+            <ul class="flex flex-col justify-center gap-1">
+              <li>
+                <a class="text-foreground" href="/projects">Projects</a>
+              </li>
+              <li>
+                <a class="text-foreground" href="/achievments">Achievements</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="flex flex-col gap-4">
+          <h4>About Me</h4>
+          <nav>
+            <ul class="flex flex-col justify-center gap-1">
+              <li>
+                <a class="text-foreground" href="/about">
+                  About Me
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="flex flex-col gap-4">
+          <h4>Hire Me</h4>
+          <nav>
+            <ul class="flex flex-col justify-center gap-1">
+              <li>
+                <a class="text-foreground" href="/services">Services</a>
+              </li>
+			  <li>
+                <a class="text-foreground" href="/contact">Contact</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div></div>
+    </div>
+    <div
+      class="mt-8 flex flex-col-reverse justify-between gap-8 border-t pt-8 text-center md:text-left xl:flex-row xl:gap-0"
+    >
+      <p>
+        © 2026 Bernardusz
+      </p>
+      <div class="text-muted-foreground flex justify-center gap-6">
+        <a href="https://www.instagram.com/bernardusz.dev/" aria-label="Instagram">
+			<Icon size={36} name="tabler:brand-instagram"/>
+		</a>
+        <a
+          href="https://github.com/Bernardusz/bitebloom-cafe"
+          target="_blank"
+          rel="noopener"
+          aria-label="GitHub"
+        >
+          <Icon size={36} name="tabler:brand-github"/>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>

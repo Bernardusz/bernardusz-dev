@@ -107,7 +107,7 @@
   .hero-background {
     @apply from-background via-primary to-background bg-linear-170 from-0% via-20% to-100% text-[#f2f2f3];
   }
-  .purple-background{
-	@apply bg-primary text-[#f2f2f3]
+  .purple-background {
+    @apply bg-primary text-[#f2f2f3];
   }
 }

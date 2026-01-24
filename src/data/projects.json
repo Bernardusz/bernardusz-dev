@@ -1,8 +1,8 @@
 {
   "top": [
     {
-	"icon-name": "tabler:cloud-network",
-	"image": "/images/Axion-Networks.png",
+      "icon-name": "tabler:cloud-network",
+      "image": "/images/Axion-Networks.png",
       "slug": "axion-networks",
       "title": "Axion Networks",
       "description": "A mock website for a VPS Company",
@@ -24,8 +24,8 @@
     },
     {
       "slug": "bitebloom-cafe",
-	"image": "/images/Bitebloom-Cafe.png",
-	  "icon-name": "tabler:coffee",
+      "image": "/images/Bitebloom-Cafe.png",
+      "icon-name": "tabler:coffee",
       "title": "Bitebloom Cafe",
       "description": "A mock website for a Cafe",
       "stack": ["Next.js", "Shadcn/ui", "TailwindCSS"],
@@ -36,8 +36,8 @@
       "link": "https://bitebloom-cafe.vercel.app"
     },
     {
-		"icon-name": "tabler:plant",
-	"image": "/images/ESP32-Hydroponics-Manager.png",
+      "icon-name": "tabler:plant",
+      "image": "/images/ESP32-Hydroponics-Manager.png",
       "slug": "esp32-hydroponics-manager",
       "title": "ESP32-Hydroponics-Manager",
       "description": "An IoT-based hydroponics monitoring system using ESP32",
@@ -49,8 +49,8 @@
     },
     {
       "slug": "todo-app",
-	"image": "/images/ToDo-App.png",
-	  "icon-name": "tabler:clipboard-list",
+      "image": "/images/ToDo-App.png",
+      "icon-name": "tabler:clipboard-list",
       "title": "ToDo-App",
       "description": "A simple todo App using React and Django in my series of learning Django and React !",
       "stack": ["React.js", "Django", "SQLite3"],
@@ -70,8 +70,8 @@
   ],
   "All Projects": [
     {
-	"icon-name": "tabler:cloud-network",
-	"image": "/images/Axion-Networks.png",
+      "icon-name": "tabler:cloud-network",
+      "image": "/images/Axion-Networks.png",
       "slug": "axion-networks",
       "title": "Axion Networks",
       "description": "A mock website for a VPS Company",
@@ -93,9 +93,9 @@
     },
     {
       "slug": "bitebloom-cafe",
-	"image": "/images/Bitebloom-Cafe.png",
+      "image": "/images/Bitebloom-Cafe.png",
       "title": "Bitebloom Cafe",
-	  "icon-name": "tabler:coffee",
+      "icon-name": "tabler:coffee",
       "description": "A mock website for a Cafe",
       "stack": ["Next.js", "Shadcn/ui", "TailwindCSS"],
       "category": "Frontend",
@@ -106,8 +106,8 @@
     },
     {
       "slug": "esp32-hydroponics-manager",
-	"image": "/images/ESP32-Hydroponics-Manager.png",
-		"icon-name": "tabler:plant",
+      "image": "/images/ESP32-Hydroponics-Manager.png",
+      "icon-name": "tabler:plant",
       "title": "ESP32-Hydroponics-Manager",
       "description": "An IoT-based hydroponics monitoring system using ESP32",
       "stack": ["C++ - Embedded", "Flask"],
@@ -118,8 +118,8 @@
     },
     {
       "slug": "todo-app",
-	  "icon-name": "tabler:clipboard-list",
-	"image": "/images/ToDo-App.png",
+      "icon-name": "tabler:clipboard-list",
+      "image": "/images/ToDo-App.png",
       "title": "ToDo-App",
       "description": "A simple todo App using React and Django in my series of learning Django and React !",
       "stack": ["React.js", "Django", "SQLite3"],
@@ -138,8 +138,8 @@
     },
     {
       "slug": "productivitypal-pyqt6",
-	"image": "/images/ProductivityPal-PyQt6.png",
-	  "icon-name": "tabler:list-search",
+      "image": "/images/ProductivityPal-PyQt6.png",
+      "icon-name": "tabler:list-search",
       "title": "ProductivityPal-PyQt6",
       "description": "A personal productivity app built with PyQt6",
       "stack": ["PyQt6"],
@@ -150,8 +150,8 @@
     },
     {
       "slug": "failed-arduino-drone",
-	"image": "/images/Failed-Arduino-Drone.png",
-	  "icon-name": "tabler:drone",
+      "image": "/images/Failed-Arduino-Drone.png",
+      "icon-name": "tabler:drone",
       "title": "Failed-Arduino-Drone",
       "description": "A lightweight two-motor drone system with Bluetooth control via HC-05. Modular, expandable, and student-built with love 💖.",
       "stack": ["C++ - Embedded"],

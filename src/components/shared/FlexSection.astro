@@ -1,7 +1,7 @@
 ---
 interface Props {
   class?: string;
-  breakpoint?: "sm" | "md" | "xl" | "2xl" 
+  breakpoint?: "sm" | "md" | "xl" | "2xl" | "none";
 }
 
 const { class: className, breakpoint } = Astro.props;
@@ -11,10 +11,10 @@ const { class: className, breakpoint } = Astro.props;
   class:list={[
     "flex min-h-60 w-full max-w-1000 flex-col gap-6",
     className,
-	{"md:flex-row" : breakpoint == "md" || !breakpoint},
-	{"xl:flex-row" : breakpoint == "xl"},
-	{"2xl:flex-row" : breakpoint == "2xl"},
-	{"sm:flex-row" : breakpoint == "sm"},
+    { "md:flex-row": breakpoint == "md" || !breakpoint },
+    { "xl:flex-row": breakpoint == "xl" },
+    { "2xl:flex-row": breakpoint == "2xl" },
+    { "sm:flex-row": breakpoint == "sm" },
   ]}
 >
   <slot />

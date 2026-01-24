@@ -1,21 +1,24 @@
 ---
-import FlexSection from "@/components/shared/FlexSection.astro";
+import achievmentsData from "@/data/achievments.json";
 import TitleSection from "@/components/shared/TitleSection.astro";
 import Card from "@/components/shared/Card.astro";
-import projectData from "@/data/projects.json"
 ---
 
 <TitleSection title="My Achievments" flexOrGrid="flex" breakpoint="2xl">
-  {projectData.top.map(project => (
-	<Card
-		title="BROO"
-		text="A project where i shocase [.......] and prove [.....]"
-		type="flex-col"
-		class="2xl:max-w-1/4"
-		imageSrc=""
-		imageAlt=""
-  	>
-    	<a class="link-primary" href={`projects/${project.slug}`}>Learn More about me</a>
- 	</Card>	
-))}
+  {
+    achievmentsData.map((achievment) => (
+      <Card
+        title={achievment.title}
+        text={achievment.description}
+        imageSrc={achievment.image}
+        imageAlt={achievment.description}
+        type="flex-col"
+        class="xl:max-w-1/3"
+      >
+        <a href={achievment.proof} class="link-primary text-left">
+          See the certificates
+        </a>
+      </Card>
+    ))
+  }
 </TitleSection>
