@@ -1,0 +1,78 @@
+[
+	{
+		"title": "Static Landing Page",
+		"priceDollar": 30,
+		"priceIDR": 500000,
+		"description": "Best for individuals, students, and small product launches.",
+		"benefits": [
+			"1 Page",
+			"Responsive",
+			"Clean design",
+			"Fast delivery",
+			"Images & Text provided by the client"
+		]
+	},
+	{
+		"title": "Small Busines Website (Up to 5 Pages)",
+		"priceDollar": 72,
+		"priceIDR": 1200000,
+		"description": "When you need a products that needs branding",
+		"benefits": [
+			"Up to 5 Pages",
+			"Responsive",
+			"3-5 days delivery max",
+			"Clean and Modern design",
+			"Images & Text provided by the client"
+		],
+		"recommended": true
+	},
+	{
+		"title": "Full Static Website (≤ 20 Pages)",
+		"priceDollar": 180,
+		"priceIDR": 3000000,
+		"description": "Perfect for you, who needs a place to share your ideas",
+		"benefits": [
+			"Up to 20 pages",
+			"Responsive",
+			"7-14 days delivery",
+			"Clean and Modern design",
+			"Optimized SEO",
+			"Top performance in mind",
+			"Free copywriting - context needed",
+			"Images provided by the client"
+		]
+	},
+	{
+		"title": "Frontend Integration Ready (≤ 5 Pages)",
+		"priceDollar": 180,
+		"priceIDR": 3000000,
+		"description": "For you who needs a pretty frontend alongside your application",
+		"benefits": [
+			"Up to 5 Pages",
+			"Responsive",
+			"7-14 days delivery",
+			"Clean and Modern design",
+			"Optimized SEO",
+			"Top performance in mind",
+			"Images and Content provided by the client",
+			"Data type needed"
+		]
+	},
+	{
+		"title": "Frontend ready for Backend (≤ 20 Pages)",
+		"priceDollar": 300,
+		"priceIDR": 5000000,
+		"description": "Robust Frontend ready to plug into your API",
+		"benefits": [
+			"Up to 20 Pages",
+			"Responsive",
+			"14-28 days delivery",
+			"Clean and Modern design",
+			"Optimized SEO",
+			"Top performance in mind",
+			"Free copywriting - context needed",
+			"Images provided by the client",
+			"Data type needed"
+		]
+	}
+]

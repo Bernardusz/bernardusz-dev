@@ -1,4 +1,6 @@
 ---
+import { fade } from 'astro:transitions';
+
 interface Props {
   title: string;
   text: string;
@@ -13,7 +15,7 @@ interface Props {
 const {
   title,
   text,
-  white,
+  white = false,
   linkText,
   link,
   variant = "h3",
@@ -31,8 +33,8 @@ const Tag = variant;
     { "items-start justify-start": !centered },
   ]}
 >
-  <Tag class:list={[{ "text-soft-white": white }]}>{title}</Tag>
-  <p class:list={[{ "text-soft-white": white }]} set:html={text} />
+  <Tag class:list={[{ "text-soft-white": white }, {"text-foreground" : !white}]}>{title}</Tag>
+  <p class:list={[{ "text-soft-white": white }, {"text-foreground" : !white}]} set:html={text} />
   {
     link && linkText && (
       <a class="link-primary" href={link}>

@@ -1,0 +1,40 @@
+---
+import TitleParagraph from '@/components/shared/TitleParagraph.astro';
+import { Icon } from 'astro-icon/components';
+
+interface Props {
+	priceDollar: number;
+	priceIDR: number;
+	title: string;
+	description: string;
+	benefits: string[];
+	recommended? : boolean;
+}
+
+const {title, description, benefits, priceDollar, priceIDR, recommended = false} = Astro.props;
+---
+
+<div class:list={[
+	"rounded-2xl gap-4 border bg-accent p-6 w-full h-full flex flex-col",
+	{ "border-secondary" : recommended},
+	{ "border-muted" : !recommended}
+]}>
+	<TitleParagraph
+		title={title}
+		text={description}
+	/>
+	<div class="border-y border-muted py-2 px-2">
+		<span class="price text-foreground" data-usd={priceDollar} data-idr={priceIDR}>Rp 500.000</span>
+	</div>
+	<ul class="flex flex-col gap-1">
+		{benefits.map((benefit) => (
+			<li
+				class="flex flex-row items-center gap-2"
+			>
+				<Icon name="tabler:circle-check" class="text-primary"/>
+				<p class="p-deemphasize">{benefit}</p>
+			</li>
+		))}
+	</ul>
+</div>
+

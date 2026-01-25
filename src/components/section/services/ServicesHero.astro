@@ -1,0 +1,70 @@
+---
+import ServiceCard from "@/components/shared/ServiceCard.astro";
+import TitleParagraph from "@/components/shared/TitleParagraph.astro";
+import servicesData from "@/data/services.json"
+
+---
+
+<section
+  class="section hero-background relative flex h-fit w-full flex-col items-center justify-center gap-0 z-0 -mt-10"
+>
+<button id="currencyToggle" class="btn btn-primary fixed right-8 top-24">
+  Switch to USD
+</button>
+
+  <div class="flex h-[50vh] flex-col items-center justify-center gap-4">
+    <TitleParagraph
+      title="Services - All My Services"
+      variant="h1"
+      centered
+      white
+      text="You need my help? Here are all my services that I offer"
+    />
+  </div>
+  <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 w-full">
+	{servicesData.map(service => (
+		<ServiceCard
+			title={service.title}
+			description={service.description}
+			priceIDR={service.priceIDR}
+			priceDollar={service.priceDollar}
+			benefits={service.benefits}
+			recommended={service.recommended}
+		/>
+	))}
+  </div>
+</section>
+
+<script>
+
+  let currency = "IDR";
+
+  const prices = document.querySelectorAll<HTMLElement>(".price");
+  const toggle = document.getElementById("currencyToggle");
+	// if(!toggle) return;
+  function renderPrices() {
+    prices.forEach((price) => {
+      if (currency === "IDR") {
+        price.textContent = "Rp " + Number(price.dataset.idr).toLocaleString("id-ID");
+      } else {
+        price.textContent = "$" + price.dataset.usd;
+      }
+    });
+
+    if (toggle){
+		toggle.textContent = currency === "IDR"
+			? "Switch to USD"
+			: "Switch to IDR";
+	}
+  }
+
+  if (toggle){
+	toggle.addEventListener("click", () => {
+		currency = currency === "IDR" ? "USD" : "IDR";
+		renderPrices();
+	});
+  }
+
+  renderPrices();
+</script>
+
