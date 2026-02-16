@@ -4,18 +4,23 @@ import TitleParagraph from "@/components/shared/TitleParagraph.astro";
 import TitleSection from "@/components/shared/TitleSection.astro";
 import Card from "@/components/shared/Card.astro";
 import achievmentsData from "@/data/achievments.json";
-const images = import.meta.glob<{default: ImageMetadata}>("/src/assets/achievements/*.{jpeg,jpg,png,gif}");
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  "/src/assets/achievements/*.{jpeg,jpg,png,gif}",
+);
 
 const optimizedAchievements = await Promise.all(
-	achievmentsData.map(async (achievment) => {
-		const imagePath = `/src/assets/achievements/${achievment.image}`;
-		if (!images[imagePath]) throw new Error(`"${imagePath}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif}"`);
-		const imageModule = await images[imagePath]();
-		return {
-			...achievment,
-			imageMetaData: imageModule.default
-		};
-	})
+  achievmentsData.map(async (achievment) => {
+    const imagePath = `/src/assets/achievements/${achievment.image}`;
+    if (!images[imagePath])
+      throw new Error(
+        `"${imagePath}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif}"`,
+      );
+    const imageModule = await images[imagePath]();
+    return {
+      ...achievment,
+      imageMetaData: imageModule.default,
+    };
+  }),
 );
 ---
 
@@ -44,24 +49,24 @@ const optimizedAchievements = await Promise.all(
   >
     {
       optimizedAchievements.map((achievment) => (
-		<Card
-			title={achievment.title}
-			text={achievment.description}
-			imageSrc={achievment.imageMetaData}
-			imageAlt={achievment.description}
-			type="flex-col"
-			class="xl:max-w-1/3"
-		>
-			<a
-				href={achievment.proof}
-				class="link-primary text-left"
-				target="_blank"
-				rel="noopener"
-			>
-				See the certificates
-			</a>
-		</Card>
-	))
+        <Card
+          title={achievment.title}
+          text={achievment.description}
+          imageSrc={achievment.imageMetaData}
+          imageAlt={achievment.description}
+          type="flex-col"
+          class="xl:max-w-1/3"
+        >
+          <a
+            href={achievment.proof}
+            class="link-primary text-left"
+            target="_blank"
+            rel="noopener"
+          >
+            See the certificates
+          </a>
+        </Card>
+      ))
     }
   </TitleSection>
 </section>

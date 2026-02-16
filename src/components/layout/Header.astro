@@ -17,9 +17,19 @@ const currentPath = Astro.url.pathname;
           : "Bernardusz"
       }
     </h4>
-    <button id="toggleMode" class="absolute right-4 md:right-8" >
-      <Icon name="tabler:sun" size={24} class="flex dark:hidden"  aria-label="Toggle to dark mode"/>
-      <Icon name="tabler:moon" size={24} class="hidden dark:flex" aria-label="Toggle to light mode"/>
+    <button id="toggleMode" class="absolute right-4 md:right-8">
+      <Icon
+        name="tabler:sun"
+        size={24}
+        class="flex dark:hidden"
+        aria-label="Toggle to dark mode"
+      />
+      <Icon
+        name="tabler:moon"
+        size={24}
+        class="hidden dark:flex"
+        aria-label="Toggle to light mode"
+      />
     </button>
     <nav
       class="grid grid-cols-3 items-center gap-2 md:absolute md:left-1/2 md:flex md:-translate-x-1/2 md:gap-6"

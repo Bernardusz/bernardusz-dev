@@ -11,7 +11,7 @@ import react from "@astrojs/react";
 // https://astro.build/config
 export default defineConfig({
   output: "static",
-	site: 'https://bernardusz-dev.vercel.app', 
+  site: "https://bernardusz-dev.vercel.app",
   vite: {
     resolve: {
       alias: {
@@ -22,7 +22,7 @@ export default defineConfig({
     plugins: [tailwindcss()],
   },
   build: {
-	inlineStylesheets: "always"
+    inlineStylesheets: "always",
   },
   adapter: vercel({
     imageService: true,

@@ -1,5 +1,5 @@
 ---
-import { Image } from 'astro:assets';
+import { Image } from "astro:assets";
 
 interface Props {
   imageSrc: ImageMetadata;
@@ -22,7 +22,7 @@ const { imageSrc, imageAlt, title, text, type, class: className } = Astro.props;
   <Image
     src={imageSrc}
     alt={imageAlt}
-	loading="lazy"
+    loading="lazy"
     class="relative aspect-video size-full h-full max-h-3/4 object-cover xl:max-h-60"
   />
 
