@@ -43,21 +43,6 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content={new URL(image, Astro.url)} />
 
-    <link
-      rel="preload"
-      href="/fonts/funnel-sans/FunnelSans-VariableFont_wght.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    <link
-      rel="preload"
-      href="/fonts/inter/Inter-VariableFont_opsz,wght.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-
     <script is:inline>
       // This runs immediately before the body renders
       const theme =
