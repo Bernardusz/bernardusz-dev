@@ -1,0 +1,30 @@
+[
+	{
+		"title": "GitHub",
+		"link": "https://github.com/Bernardusz/",
+		"icon": "tabler:brand-github",
+		"description": "Place where my codes live.",
+		"linkText": "See my projects"
+	},
+	{
+		"title": "Email",
+		"link": "mailto:b.christian.nugroho.study@gmail.com?subject=Freelance Inquiry",
+		"icon": "tabler:brand-gmail",
+		"description": "My professional contact.",
+		"linkText": "Contact me"
+	},
+	{
+		"title": "Instagram",
+		"link": "https://www.instagram.com/bernardusz.dev/",
+		"icon": "tabler:brand-instagram",
+		"description": "My personal social media.",
+		"linkText": "See for yourself"
+	},
+	{
+		"title": "WhatsApp",
+		"link": "https://wa.me/6281330451070?text=Hi! I saw your portfolio and I'm interested in working with you on a project.",
+		"icon": "tabler:brand-whatsapp",
+		"description": "My personal contact information",
+		"linkText": "Chat with me"
+	}
+]

@@ -1,0 +1,35 @@
+---
+import TitleParagraph from "@/components/shared/TitleParagraph.astro";
+import GridSection from "@/components/shared/GridSection.astro";
+import contactData from "@/data/contact.json"
+import ProjectCard from "@/components/shared/ProjectCard.astro";
+import ContactCard from "@/components/shared/ContactCard.astro";
+---
+
+<section
+  class="hero-background section relative flex h-fit w-full flex-col items-center justify-center"
+>
+  <div class="flex h-[50vh] flex-col items-center justify-center gap-4">
+    <TitleParagraph
+      title="Let's Build Something Together!"
+      variant="h1"
+      centered
+      white
+      text="My contact, for you who needs my help or want to collaborate."
+    />
+  </div>
+  <GridSection breakpoint="md">
+	{
+    	contactData.map((contact) => (
+			<ContactCard
+				title={contact.title}
+				text={contact.description}
+				link={contact.link}
+				linkText={contact.linkText}
+				iconName={contact.icon}
+				iconSize={36}
+			/>
+		))
+    }
+  </GridSection>
+</section>

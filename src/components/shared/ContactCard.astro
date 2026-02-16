@@ -8,22 +8,18 @@ interface Props {
   text: string;
   type?: "flex-col" | "flex-row" | "flex-col-reverse";
   class?: string;
-  deployed: boolean;
-  repository: string;
-  link?: string;
-  stack: string[];
+  link: string;
+  linkText: string;
 }
 
 const {
   iconName,
   link,
-  stack,
-  repository,
-  deployed,
   iconSize,
   title,
   text,
   type = "flex-col",
+  linkText,
   class: className,
 } = Astro.props;
 ---
@@ -43,25 +39,10 @@ const {
       </div>
     </div>
     <div class="flex flex-col gap-8">
-      <div class="flex w-full flex-row items-start justify-start gap-2">
-		{stack ? (stack.map((tech) => <Badge text={tech} />)) : null}
 	</div>
-      {
-        deployed ? (
-          <div class="flex flex-row gap-8">
-            <a class="link-primary text-left" href={repository}>
-              Repository
-            </a>
-            <a class="link-primary text-left" href={link}>
-              See the demo
-            </a>
-          </div>
-        ) : (
-          <a class="link-primary text-left" href={repository}>
-            Repository
+          <a class="link-primary text-left" href={link}>
+            {linkText}
           </a>
-        )
-      }
+        
     </div>
   </div>
-</div>
