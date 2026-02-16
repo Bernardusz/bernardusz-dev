@@ -1,9 +1,9 @@
 ---
 import TitleParagraph from "@/components/shared/TitleParagraph.astro";
 interface Props {
-	noLearnMore?: boolean
+  noLearnMore?: boolean;
 }
-const {noLearnMore} = Astro.props;
+const { noLearnMore } = Astro.props;
 ---
 
 <section
@@ -16,14 +16,20 @@ const {noLearnMore} = Astro.props;
     title="A Creative, Communicative and Reliable dev"
     text="Help you deliver your needed websites/apps quickly, efficiently without compromising robustness"
   />
-	{noLearnMore ? (
-		<a class="btn-primary w-40" href="/contact">Hire Me</a>
-
-	) : (
-	  <div class="flex flex-row justify-center gap-8">
-		<a class="btn-primary" href="/contact">Contact Me</a>
-		<a class="btn-secondary" href="/services">Learn More</a>
-	  </div>
-	)}
-    
+  {
+    noLearnMore ? (
+      <a class="btn-primary w-40" href="/contact">
+        Hire Me
+      </a>
+    ) : (
+      <div class="flex flex-row justify-center gap-8">
+        <a class="btn-primary" href="/contact">
+          Contact Me
+        </a>
+        <a class="btn-secondary" href="/services">
+          Learn More
+        </a>
+      </div>
+    )
+  }
 </section>

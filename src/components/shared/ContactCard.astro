@@ -1,6 +1,5 @@
 ---
 import { Icon } from "astro-icon/components";
-import Badge from "@/components/shared/Badge.astro";
 interface Props {
   iconName: string;
   title: string;
@@ -38,11 +37,14 @@ const {
         <p>{text}</p>
       </div>
     </div>
-    <div class="flex flex-col gap-8">
-	</div>
-          <a class="link-primary text-left" href={link}>
-            {linkText}
-          </a>
-        
-    </div>
+    <div class="flex flex-col gap-8"></div>
+    <a
+      class="link-primary text-left"
+      href={link}
+      target="_blank"
+      rel="noopener"
+    >
+      {linkText}
+    </a>
   </div>
+</div>

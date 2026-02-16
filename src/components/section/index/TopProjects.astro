@@ -26,15 +26,30 @@ import ProjectCard from "@/components/shared/ProjectCard.astro";
           </div>
           {project.deployed ? (
             <div class="flex flex-row gap-8">
-              <a class="link-primary text-left" href={project.repository}>
+              <a
+                class="link-primary text-left"
+                href={project.repository}
+                target="_blank"
+                rel="noopener"
+              >
                 Repository
               </a>
-              <a class="link-primary text-left" href={project.link}>
+              <a
+                class="link-primary text-left"
+                href={project.link}
+                target="_blank"
+                rel="noopener"
+              >
                 See the demo
               </a>
             </div>
           ) : (
-            <a class="link-primary text-left" href={project.repository}>
+            <a
+              class="link-primary text-left"
+              href={project.repository}
+              target="_blank"
+              rel="noopener"
+            >
               Repository
             </a>
           )}
