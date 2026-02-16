@@ -2,7 +2,7 @@
 import Button from "@/components/shared/Button.astro";
 import TitleParagraph from "@/components/shared/TitleParagraph.astro";
 import { Image } from "astro:assets";
-import GitHubScreenshot from "~/images/Bernardusz_GitHub.png";
+import GitHubScreenshot from "~/Bernardusz_GitHub.png";
 ---
 
 <section
@@ -26,6 +26,8 @@ import GitHubScreenshot from "~/images/Bernardusz_GitHub.png";
     src={GitHubScreenshot}
     alt="Screenshot of GitHub"
     class="-mt-24 aspect-video w-full rounded-xl"
-    quality="max"
+	loading="eager"
+	fetchpriority="high"
+    quality={80}
   />
 </section>

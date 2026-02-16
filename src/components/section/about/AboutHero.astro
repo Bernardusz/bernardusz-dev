@@ -1,8 +1,7 @@
 ---
-import Button from "@/components/shared/Button.astro";
 import TitleParagraph from "@/components/shared/TitleParagraph.astro";
 import { Image } from "astro:assets";
-import InstagramScreenshot from "~/images/Bernardusz_Instagram.png";
+import InstagramScreenshot from "~/Bernardusz_Instagram.png";
 ---
 
 <section
@@ -21,6 +20,8 @@ import InstagramScreenshot from "~/images/Bernardusz_Instagram.png";
     src={InstagramScreenshot}
     alt="Screenshot of GitHub"
     class="-mt-24 h-full rounded-xl"
-    quality="max"
+	loading="eager"
+	fetchpriority="high"
+    quality={80}
   />
 </section>

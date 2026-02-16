@@ -17,19 +17,19 @@ const currentPath = Astro.url.pathname;
           : "Bernardusz"
       }
     </h4>
-    <button id="toggleMode" class="absolute right-4 md:right-8">
-      <Icon name="tabler:sun" size={24} class="flex dark:hidden" />
-      <Icon name="tabler:moon" size={24} class="hidden dark:flex" />
+    <button id="toggleMode" class="absolute right-4 md:right-8" >
+      <Icon name="tabler:sun" size={24} class="flex dark:hidden"  aria-label="Toggle to dark mode"/>
+      <Icon name="tabler:moon" size={24} class="hidden dark:flex" aria-label="Toggle to light mode"/>
     </button>
     <nav
       class="grid grid-cols-3 items-center gap-2 md:absolute md:left-1/2 md:flex md:-translate-x-1/2 md:gap-6"
     >
-      <a class="link-primary" href="/"> Home </a>
-      <a class="link-primary" href="/about"> About</a>
-      <a class="link-primary" href="/projects">Projects</a>
-      <a class="link-primary" href="/achievements"> Achievments</a>
-      <a class="link-primary" href="/services">Services</a>
-      <a class="link-primary" href="/contact"> Contact</a>
+      <a class="link-primary text-pop" href="/"> Home </a>
+      <a class="link-primary text-pop" href="/about"> About</a>
+      <a class="link-primary text-pop" href="/projects">Projects</a>
+      <a class="link-primary text-pop" href="/achievements"> Achievments</a>
+      <a class="link-primary text-pop" href="/services">Services</a>
+      <a class="link-primary text-pop" href="/contact"> Contact</a>
     </nav>
   </div>
 </header>

@@ -20,6 +20,7 @@ const { imageSrc, imageAlt, title, text, type, class: className } = Astro.props;
   <img
     src={imageSrc}
     alt={imageAlt}
+	loading="lazy"
     class="relative aspect-video size-full h-full max-h-3/4 object-cover xl:max-h-60"
   />
 
