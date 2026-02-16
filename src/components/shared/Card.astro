@@ -1,6 +1,8 @@
 ---
+import { Image } from 'astro:assets';
+
 interface Props {
-  imageSrc: string;
+  imageSrc: ImageMetadata;
   imageAlt: string;
   title: string;
   text: string;
@@ -17,7 +19,7 @@ const { imageSrc, imageAlt, title, text, type, class: className } = Astro.props;
     className,
   ]}
 >
-  <img
+  <Image
     src={imageSrc}
     alt={imageAlt}
 	loading="lazy"
