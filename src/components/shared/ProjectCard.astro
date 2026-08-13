@@ -1,10 +1,11 @@
 ---
 import { Icon } from "astro-icon/components";
 import Badge from "@/components/shared/Badge.astro";
+import Image from "astro/components/Image.astro";
 interface Props {
-  iconName: string;
+  iconName?: string;
   title: string;
-  iconSize: number;
+  iconSize?: number;
   text: string;
   type?: "flex-col" | "flex-row" | "flex-col-reverse";
   class?: string;
@@ -12,6 +13,9 @@ interface Props {
   repository: string;
   link?: string;
   stack: string[];
+  iconLightSrc?: string;
+  iconDarkSrc?: string;
+  iconAlt?: string;
 }
 
 const {
@@ -24,8 +28,12 @@ const {
   title,
   text,
   type = "flex-col",
+  iconLightSrc,
+  iconDarkSrc,
+  iconAlt,
   class: className,
 } = Astro.props;
+
 ---
 
 <div
@@ -36,14 +44,17 @@ const {
 >
   <div class="flex w-full flex-col items-start justify-between gap-4 p-6">
     <div class={`flex w-full items-start justify-between gap-2 ${type}`}>
-      <Icon name={iconName} size={iconSize} class:list={"text-foreground"} />
+      {(iconName && iconSize) && (
+        <Icon name={iconName} size={iconSize} class:list={"text-foreground"} />
+      )}
+
       <div class="flex flex-col items-start gap-2">
         <h3 class="text-foreground">{title}</h3>
         <p>{text}</p>
       </div>
     </div>
     <div class="flex flex-col gap-8">
-      <div class="flex w-full flex-row items-start justify-start gap-2">
+      <div class="flex w-full flex-row items-start overflow-clip justify-start gap-2">
         {stack ? stack.map((tech) => <Badge text={tech} />) : null}
       </div>
       {
